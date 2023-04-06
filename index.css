@@ -73,13 +73,17 @@ nav {
 }
 
 .link {
+    position: relative;
     font-size: var(--font-size-5);
     font-weight: 500;
-
+z-index: 3  ;
     padding: 7px;
     border-radius: 5px;
     animation: link 1s .6s forwards;
 
+}
+.link:hover{
+    cursor: pointer;
 }
 
 @keyframes link {}
@@ -210,7 +214,7 @@ nav {
     /* height: 500px; */
     display: flex;
     align-items: center;
-    padding-top: 64px;
+    padding-top: 16px;
 }
 
 .hero-body {
@@ -414,12 +418,65 @@ grid-gap: 0px;
     animation-name:box-out ;
     animation-delay: 99s;
     animation-fill-mode: forwards;
-    animation-duration: 0.01s;
- 
+    animation-duration: 99s;
+    position: relative;
+ z-index: 3;
 }
+/* .box::before{
+    content: "";
+position: absolute;
+width: 100%;
+height: 100%;
+top: 0;
+left: 0;
+
+
+}
+.box:hover::before{
+
+background-color: rgb(255, 255, 255);
+} */
 
 @keyframes box-out {
-    from{transform: scale(0.99);}
-    to{transform: scale(0);}
+    from{background-color: white;}
+    to{background-color: rgba(0, 0, 0, 0);}
     
+}
+
+.upper-boxes{
+    position: absolute;
+    top: 0  ;
+
+    display: grid;
+    grid-template-columns: repeat(200,1fr);
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+
+}
+.upper-box{
+
+    width: 100%;
+    height: 100%;
+}
+.upper-box:hover{
+
+    background-color: rgb(255, 255, 255);
+    width: 100%;
+    height: 100%;
+}
+
+.bottons{
+    
+    width: 100vw;
+}
+.botton{
+    display: inline-block;
+    background-color: white;
+    color: rgb(0, 0, 0);
+    padding: 8px;
+    font-size: var(--font-size-4);
+    border-radius: 5px;
+    box-shadow: 0px 0px 5px 5px white;
+    font-weight: 500;
 }

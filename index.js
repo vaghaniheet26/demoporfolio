@@ -7,8 +7,8 @@ box.classList.add("box");
     
 }
 // Define the minimum and maximum animation durations
-const minDuration = 2; // seconds
-const maxDuration = 5; // seconds
+const minDuration = .4; // seconds
+const maxDuration = 3; // seconds
 const minDuration2 = 0;
 const maxDuration2 = 1.5;
 // Get all .boxout elements
@@ -20,8 +20,17 @@ boxOutElements.forEach(element => {
     
     element.style.animationDelay = duration + 's';
   });
-// boxOutElements.forEach(element => {
-//   const duration = Math.random() * (maxDuration - minDuration) + minDuration;
-//   element.style.animationDuration = duration + 's';
+boxOutElements.forEach(element => {
+  const duration = Math.random() * (maxDuration - minDuration) + minDuration;
+  element.style.animationDuration = duration + 's';
 
-// });
+});
+const boxnumber = 200*100;
+const upperboxes = document.querySelector(".upper-boxes");
+console.log(upperboxes);
+for (let i = 0; i < boxnumber; i++) {
+    const upperbox = document.createElement("div");
+    upperbox.classList.add("upper-box");
+    upperboxes.appendChild(upperbox);
+    
+}
