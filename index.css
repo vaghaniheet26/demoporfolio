@@ -23,6 +23,7 @@
 }
 
 body {
+     cursor: none;
     background-color: var(--background-color);
     width: 100vh;
     height: 100vh;
